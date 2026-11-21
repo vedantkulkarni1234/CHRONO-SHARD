@@ -1,0 +1,10 @@
+/target
+/w64devkit
+*.exe
+*.pdb
+*.log
+chrono_shard_report_*.md
+test_incident_report.md
+test_artifacts/
+logs/
+*.bak
