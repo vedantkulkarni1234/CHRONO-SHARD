@@ -4,6 +4,7 @@
 [![TUI](https://img.shields.io/badge/TUI-Ratatui%200.29-cyan.svg?style=flat-square)](https://github.com/ratatui/ratatui)
 [![AI Engine](https://img.shields.io/badge/AI-Gemini%20Dual--Model-purple.svg?style=flat-square&logo=google)](https://ai.google.dev)
 [![MITRE ATT&CK](https://img.shields.io/badge/MITRE-v15.1%20Enterprise-crimson.svg?style=flat-square)](https://attack.mitre.org)
+[![Latest Release](https://img.shields.io/github/v/release/vedantkulkarni1234/CHRONO-SHARD?style=flat-square&logo=github)](https://github.com/vedantkulkarni1234/CHRONO-SHARD/releases/latest)
 [![License](https://img.shields.io/badge/License-MIT%20%2F%20Apache--2.0-blue.svg?style=flat-square)](#license)
 
 **CHRONO-SHARD** is a blazing-fast, terminal-based (TUI) live digital forensics and incident response (DFIR) time-machine written in Rust. It sweeps live filesystem metadata (MACB timestamps), system authentication logs, shell histories, persistence mechanisms, and browser history databases in **under 2 seconds**, detects anomalous temporal bursts, and leverages Google Gemini's dual-model architecture (**`gemini-3.5-flash-lite` + `gemini-4-carbon`**) to reconstruct a cohesive, interactive **MITRE ATT&CK kill-chain timeline** directly inside a cyber-forensic terminal UI.
@@ -74,7 +75,47 @@
 
 ---
 
-## 🚀 Getting Started
+## 📦 Download & Installation
+
+Pre-built binaries are available for Windows and Linux on the [**Latest GitHub Release (v0.1.0)**](https://github.com/vedantkulkarni1234/CHRONO-SHARD/releases/latest).
+
+### 🪟 Windows (`.exe`)
+1. Download [**`chrono-shard.exe`**](https://github.com/vedantkulkarni1234/CHRONO-SHARD/releases/download/v0.1.0/chrono-shard.exe).
+2. Open PowerShell or Command Prompt in the folder containing `chrono-shard.exe`.
+3. Run the forensic analyzer:
+   ```powershell
+   # Run with simulated attack artifacts
+   .\chrono-shard.exe --simulate
+
+   # Run a live forensic sweep (optionally with your Gemini API key)
+   $env:GEMINI_API_KEY="your-api-key-here"
+   .\chrono-shard.exe
+   ```
+
+### 🐧 Linux (`.deb` - Debian, Ubuntu, Kali, Mint)
+1. Download the Debian package:
+   ```bash
+   wget https://github.com/vedantkulkarni1234/CHRONO-SHARD/releases/download/v0.1.0/chrono-shard_0.1.0-1_amd64.deb
+   ```
+2. Install the package:
+   ```bash
+   sudo dpkg -i chrono-shard_0.1.0-1_amd64.deb
+   # If any dependencies are missing, fix with:
+   sudo apt-get install -f
+   ```
+3. Run directly from anywhere in your terminal:
+   ```bash
+   # Run simulation mode
+   chrono-shard --simulate
+
+   # Run live forensic sweep with Gemini AI
+   export GEMINI_API_KEY="your-api-key-here"
+   chrono-shard
+   ```
+
+---
+
+## 🛠️ Building from Source
 
 ### Prerequisites
 - **Rust Toolchain:** Rust 1.75+ (Cargo edition 2021)
@@ -84,8 +125,8 @@
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-org/chrono-shard.git
-cd chrono-shard
+git clone https://github.com/vedantkulkarni1234/CHRONO-SHARD.git
+cd CHRONO-SHARD
 
 # Build optimized release binary
 cargo build --release
