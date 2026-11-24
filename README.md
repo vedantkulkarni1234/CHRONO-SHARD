@@ -7,7 +7,7 @@
 [![Latest Release](https://img.shields.io/github/v/release/vedantkulkarni1234/CHRONO-SHARD?style=flat-square&logo=github)](https://github.com/vedantkulkarni1234/CHRONO-SHARD/releases/latest)
 [![License](https://img.shields.io/badge/License-MIT%20%2F%20Apache--2.0-blue.svg?style=flat-square)](#license)
 
-![Uploading image.png…]()
+<img width="2048" height="2048" alt="image" src="https://github.com/user-attachments/assets/7dd3ddf9-31f7-4488-99ee-20fa94363cc7" />
 
 **CHRONO-SHARD** is a blazing-fast, terminal-based (TUI) live digital forensics and incident response (DFIR) time-machine written in Rust. It sweeps live filesystem metadata (MACB timestamps), system authentication logs, shell histories, persistence mechanisms, and browser history databases in **under 2 seconds**, detects anomalous temporal bursts, and leverages Google Gemini's dual-model architecture (**`gemini-3.5-flash-lite` + `gemini-4-carbon`**) to reconstruct a cohesive, interactive **MITRE ATT&CK kill-chain timeline** directly inside a cyber-forensic terminal UI.
 
